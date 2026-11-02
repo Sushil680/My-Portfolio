@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Sushil Nath Yogi | Portfolio</title>
+    <meta name="description" content="Portfolio of Sushil Nath Yogi - Bachelor of IT Student, Python Developer, Data Science Learner, and Graphic Designer based in Kathmandu, Nepal.">
+    <meta name="keywords" content="Sushil Nath Yogi, Sushil Yogi, Python Developer, Data Science, Machine Learning, Flask, Graphic Design, Nepal Portfolio">
+    <meta name="author" content="Sushil Nath Yogi">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Sushil Nath Yogi | Portfolio">
+    <meta property="og:description" content="Bachelor of IT Student, Python Developer, Data Science Learner, and Graphic Designer.">
+    <meta property="og:image" content="{{ url_for('static', filename='assets/images/my.jpg', _external=True) }}">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sushil Nath Yogi | Portfolio">
+    <meta name="twitter:description" content="Bachelor of IT Student, Python Developer, Data Science Learner, and Graphic Designer.">
+    <meta name="twitter:image" content="{{ url_for('static', filename='assets/images/my.jpg', _external=True) }}">
+
+    <!-- Favicon -->
+    <link rel="icon" href="{{ url_for('static', filename='assets/favicon.ico') }}">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='animate.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='flexslider.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='fonts/icomoon/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&family=Raleway:wght@600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        .project-card {
+            margin-bottom: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card .thumb {
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .project-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .about-image {
+            width: 100%;
+            max-height: 480px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .site-contact-details li {
+            margin-bottom: 24px;
+            font-size: 16px;
+            color: #e5e7eb;
+        }
+
+        .site-contact-details li a {
+            color: #bac964;
+            word-break: break-all;
+        }
+
+        .site-contact-details li a:hover {
+            color: #00ffcc;
+            text-decoration: underline;
+        }
+
+        .hero-cta {
+            margin-top: 25px;
+        }
+
+        .hero-cta .btn {
+            margin: 6px;
+            padding: 12px 28px;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            font-size: 13px;
+            border-radius: 30px;
+        }
+
+        .btn-brand {
+            background-color: #bac964;
+            color: #111;
+            border: 2px solid #bac964;
+            transition: all 0.3s ease;
+        }
+
+        .btn-brand:hover {
+            background-color: transparent;
+            color: #bac964;
+        }
+
+        .btn-outline-light-custom {
+            border: 2px solid rgba(255, 255, 255, 0.6);
+            color: #fff;
+            background: transparent;
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline-light-custom:hover {
+            border-color: #bac964;
+            color: #bac964;
+            background: rgba(186, 201, 100, 0.1);
+        }
+
+        .resume-item {
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .resume-item:hover {
+            border-color: #bac964 !important;
+            transform: translateY(-3px);
+        }
+
+        @media (max-width: 768px) {
+            .site-heading {
+                font-size: 32px !important;
+                margin-bottom: 10px !important;
+            }
+            .hero-cta .btn {
+                padding: 10px 22px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body data-spy="scroll" data-target="#pb-navbar" data-offset="100">
+
+<!-- NAVIGATION -->
+<nav class="navbar navbar-expand-lg site-navbar navbar-light bg-light" id="pb-navbar">
+    <div class="container">
+        <a class="navbar-brand font-weight-bold" href="#section-home">SUSHIL</a>
+
+        <button class="navbar-toggler" type="button"
+                data-toggle="collapse"
+                data-target="#navbarsExample09"
+                aria-controls="navbarsExample09"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample09">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="#section-home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#section-portfolio">Portfolio</a></li>
+                <li class="nav-item"><a class="nav-link" href="#section-resume">Resume</a></li>
+                <li class="nav-item"><a class="nav-link" href="#section-about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#section-services">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="#section-blog">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="#section-contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- HOME -->
+<section class="site-hero"
+         style="background-image: url('{{ url_for('static', filename='assets/images/image_1.jpg') }}');"
+         id="section-home">
+
+    <div class="container h-100">
+        <div class="row intro-text align-items-center justify-content-center h-100">
+            <div class="col-md-10 text-center pt-5">
+
+                <h1 class="site-heading site-animate text-uppercase mb-2"
+                    style="font-size: 38px; font-weight: 300; letter-spacing: 3px;">
+                    Hello, I'm
+                </h1>
+
+                <div class="glitch-wrapper">
+                    <a href="#section-about" class="glitch" data-glitch="Sushil Nath Yogi">
+                        Sushil Nath Yogi
+                    </a>
+                </div>
+
+                <div class="typed-container">
+                    <span class="typed-prompt">&gt;</span>
+                    <span id="typed-text" class="typed-text"></span>
+                    <span class="typed-cursor">|</span>
+                </div>
+
+                <div class="hero-cta">
+                    <a href="#section-portfolio" class="btn btn-brand smoothscroll">
+                        View Portfolio
+                    </a>
+                    <a href="#section-contact" class="btn btn-outline-light-custom smoothscroll">
+                        Get In Touch
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="site-section" id="section-portfolio">
+    <div class="container">
+
+        <div class="row">
+            <div class="section-heading text-center col-md-12">
+                <h2>My <strong>Portfolio</strong></h2>
+                <p>Curated selection of software projects, data science workflows, and creative designs.</p>
+            </div>
+        </div>
+
+        <div class="filters">
+            <ul>
+                <li class="active" data-filter="*">All</li>
+                <li data-filter=".python">Python Projects</li>
+                <li data-filter=".ml">Machine Learning</li>
+                <li data-filter=".design">Graphic Design</li>
+            </ul>
+        </div>
+
+        <div class="filters-content">
+            <div class="row grid">
+
+                <!-- PROJECT 1 -->
+                <div class="single-portfolio col-sm-6 col-lg-4 all python ml project-card">
+                    <div class="relative">
+                        <div class="thumb">
+                            <div class="overlay overlay-bg"></div>
+                            <img class="image img-fluid"
+                                 src="{{ url_for('static', filename='assets/images/1.jpg') }}"
+                                 alt="Movie Recommendation System">
+                        </div>
+                    </div>
+
+                    <div class="p-inner">
+                        <h4>Movie Recommendation System</h4>
+                        <div class="cat">Machine Learning | Python</div>
+                    </div>
+                </div>
+
+                <!-- PROJECT 2 -->
+                <div class="single-portfolio col-sm-6 col-lg-4 all python ml project-card">
+                    <div class="relative">
+                        <div class="thumb">
+                            <div class="overlay overlay-bg"></div>
+                            <img class="image img-fluid"
+                                 src="{{ url_for('static', filename='assets/images/2.jpg') }}"
+                                 alt="Health Score Predictor">
+                        </div>
+                    </div>
+
+                    <div class="p-inner">
+                        <h4>Health Score Predictor</h4>
+                        <div class="cat">Machine Learning | Scikit-Learn</div>
+                    </div>
+                </div>
+
+                <!-- PROJECT 3 -->
+                <div class="single-portfolio col-sm-6 col-lg-4 all python ml project-card">
+                    <div class="relative">
+                        <div class="thumb">
+                            <div class="overlay overlay-bg"></div>
+                            <img class="image img-fluid"
+                                 src="{{ url_for('static', filename='assets/images/3.jpg') }}"
+                                 alt="Quora Question Pair Prediction">
+                        </div>
+                    </div>
+
+                    <div class="p-inner">
+                        <h4>Quora Question Pair Prediction</h4>
+                        <div class="cat">NLP | Machine Learning</div>
+                    </div>
+                </div>
+
+                <!-- PROJECT 4 -->
+                <div class="single-portfolio col-sm-6 col-lg-4 all python project-card">
+                    <div class="relative">
+                        <div class="thumb">
+                            <div class="overlay overlay-bg"></div>
+                            <img class="image img-fluid"
+                                 src="{{ url_for('static', filename='assets/images/4.jpg') }}"
+                                 alt="Fitness Tracker App">
+                        </div>
+                    </div>
+
+                    <div class="p-inner">
+                        <h4>Fitness Tracker Web App</h4>
+                        <div class="cat">Python | Flask | SQLite</div>
+                    </div>
+                </div>
+
+                <!-- PROJECT 5 -->
+                <div class="single-portfolio col-sm-6 col-lg-4 all python project-card">
+                    <div class="relative">
+                        <div class="thumb">
+                            <div class="overlay overlay-bg"></div>
+                            <img class="image img-fluid"
+                                 src="{{ url_for('static', filename='assets/images/5.jpg') }}"
+                                 alt="Weather Forecast App">
+                        </div>
+                    </div>
+
+                    <div class="p-inner">
+                        <h4>Weather Forecast App</h4>
+                        <div class="cat">Python | Open API Integration</div>
+                    </div>
+                </div>
+
+                <!-- PROJECT 6 -->
+                <div class="single-portfolio col-sm-6 col-lg-4 all design project-card">
+                    <div class="relative">
+                        <div class="thumb">
+                            <div class="overlay overlay-bg"></div>
+                            <img class="image img-fluid"
+                                 src="{{ url_for('static', filename='assets/images/6.jpg') }}"
+                                 alt="Creative Graphic Designs">
+                        </div>
+                    </div>
+
+                    <div class="p-inner">
+                        <h4>Creative Graphic Designs</h4>
+                        <div class="cat">Branding | Vector &amp; Digital Art</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- RESUME -->
+<section class="site-section" id="section-resume">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-12 mb-5">
+                <div class="section-heading text-center">
+                    <h2>My <strong>Resume</strong></h2>
+                    <p>Educational background, technical experience, and continuous self-learning journey.</p>
+                </div>
+            </div>
+
+            <!-- EDUCATION -->
+            <div class="col-md-6">
+                <h2 class="mb-5 text-white">Education</h2>
+
+                <div class="resume-item mb-4">
+                    <span class="date">
+                        <span class="icon-calendar"></span>
+                        November 2024 - Present
+                    </span>
+
+                    <h3>Bachelor of Information Technology (BIT)</h3>
+
+                    <p>
+                        Texas College of Management &amp; IT<br>
+                        Studying software development, algorithms, databases, data structures, and computer networking.
+                    </p>
+
+                    <span class="school">Kathmandu, Nepal</span>
+                </div>
+
+                <div class="resume-item mb-4">
+                    <span class="date">
+                        <span class="icon-calendar"></span>
+                        2022 - 2024
+                    </span>
+
+                    <h3>Higher Secondary Education (+2 Science)</h3>
+
+                    <p>
+                        Comprehensive studies in Physics, Mathematics, and Computer Science foundations.
+                    </p>
+
+                    <span class="school">Nepal</span>
+                </div>
+
+                <div class="resume-item mb-4">
+                    <span class="date">
+                        <span class="icon-calendar"></span>
+                        Completed
+                    </span>
+
+                    <h3>Secondary Education Examination (SEE)</h3>
+
+                    <p>
+                        Completed secondary education with strong analytical focus in Mathematics and Science.
+                    </p>
+
+                    <span class="school">Nepal</span>
+                </div>
+            </div>
+
+            <!-- EXPERIENCE -->
+            <div class="col-md-6">
+                <h2 class="mb-5 text-white">Experience &amp; Learning</h2>
+
+                <div class="resume-item mb-4">
+                    <span class="date">
+                        <span class="icon-calendar"></span>
+                        2024 - Present
+                    </span>
+
+                    <h3>Python &amp; Flask Developer - Personal Projects</h3>
+
+                    <p>
+                        Building dynamic web applications, backend APIs, and automation utilities.
+                        Proficient with Flask routing, Jinja2 templating, SQL databases, and responsive frontends.
+                    </p>
+
+                    <span class="school">Self-Directed &amp; Academic Projects</span>
+                </div>
+
+                <div class="resume-item mb-4">
+                    <span class="date">
+                        <span class="icon-calendar"></span>
+                        2024 - Present
+                    </span>
+
+                    <h3>Data Science &amp; Machine Learning Learner</h3>
+
+                    <p>
+                        Exploring data manipulation, exploratory data analysis (EDA), and machine learning pipelines
+                        with Pandas, NumPy, Matplotlib, and Scikit-learn.
+                    </p>
+
+                    <span class="school">Applied Learning &amp; Kaggle / GitHub</span>
+                </div>
+
+                <div class="resume-item mb-4">
+                    <span class="date">
+                        <span class="icon-calendar"></span>
+                        2024 - Present
+                    </span>
+
+                    <h3>Graphic Designer - Freelance &amp; Creative</h3>
+
+                    <p>
+                        Creating posters, social media banners, vector logos, marketing collateral,
+                        and digital layouts focusing on clean typography, balance, and color theory.
+                    </p>
+
+                    <span class="school">Creative Portfolio Practice</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="site-section" id="section-about">
+    <div class="container">
+
+        <div class="row mb-5 align-items-center">
+
+            <div class="col-lg-6 pr-lg-5 mb-5 mb-lg-0 text-center">
+                <img src="{{ url_for('static', filename='assets/images/my.jpg') }}"
+                     alt="Sushil Nath Yogi"
+                     class="img-fluid about-image">
+            </div>
+
+            <div class="col-lg-6 pl-lg-5">
+                <div class="section-heading">
+                    <h2>About <strong>Me</strong></h2>
+                </div>
+
+                <p class="lead text-white font-weight-normal">
+                    Hi! I'm Sushil Nath Yogi, a Bachelor of Information
+                    Technology (BIT) student passionate about software engineering,
+                    Data Science, and Graphic Design.
+                </p>
+
+                <p class="mb-4">
+                    I thrive on solving real-world challenges, exploring cutting-edge technologies,
+                    and building creative, functional projects. I am currently honing my craft in Python,
+                    SQL, Flask, data visualization, and applied Machine Learning models.
+                </p>
+
+                <p class="mb-5">
+                    Alongside code, I have a passion for visual aesthetics—designing brand identities,
+                    digital marketing media, and intuitive UI layouts. My objective is to bridge technology
+                    and creative design to build impactful digital solutions.
+                </p>
+
+                <p>
+                    <a href="#section-contact"
+                       class="btn btn-primary px-4 py-3 btn-sm smoothscroll font-weight-bold">
+                        Contact Me
+                    </a>
+
+                    <a href="{{ url_for('static', filename='assets/cv.pdf') }}"
+                       class="btn btn-outline-light-custom px-4 py-3 btn-sm font-weight-bold ml-2"
+                       download="Sushil_Nath_Yogi_CV.pdf"
+                       target="_blank">
+                        Download CV (PDF)
+                    </a>
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section class="site-section pb-0" id="section-services">
+    <div class="container">
+
+        <div class="row mb-4">
+            <div class="col-md-12">
+                <div class="section-heading text-center">
+                    <h2>My <strong>Services</strong></h2>
+                    <p>Core skillsets and services I bring to collaborative teams and projects.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <!-- WEB DEVELOPMENT -->
+            <div class="col-md-6 col-lg-4 text-center mb-5">
+                <div class="site-service-item site-animate">
+                    <span class="icon">
+                        <span class="icon-browser2"></span>
+                    </span>
+
+                    <h3 class="mb-4">Web Development</h3>
+
+                    <p>
+                        Developing responsive, mobile-first web applications using Python, Flask,
+                        HTML5, CSS3, Bootstrap, and JavaScript. Focusing on performance,
+                        clean structure, and user accessibility.
+                    </p>
+                </div>
+            </div>
+
+            <!-- DATA SCIENCE -->
+            <div class="col-md-6 col-lg-4 text-center mb-5">
+                <div class="site-service-item site-animate">
+                    <span class="icon">
+                        <span class="icon-presentation"></span>
+                    </span>
+
+                    <h3 class="mb-4">Data Science &amp; ML</h3>
+
+                    <p>
+                        Performing exploratory data analysis, data cleaning, statistical modeling,
+                        and machine learning workflows with Python, Pandas, NumPy, and Scikit-learn
+                        to turn data into actionable intelligence.
+                    </p>
+                </div>
+            </div>
+
+            <!-- GRAPHIC DESIGN -->
+            <div class="col-md-6 col-lg-4 text-center mb-5">
+                <div class="site-service-item site-animate">
+                    <span class="icon">
+                        <span class="icon-video2"></span>
+                    </span>
+
+                    <h3 class="mb-4">Graphic Design</h3>
+
+                    <p>
+                        Designing high-impact visual graphics, social media promotional materials,
+                        brand identities, posters, banners, and digital assets tailored for maximum
+                        engagement and visual clarity.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- BLOG -->
+<section class="site-section" id="section-blog">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-12 mb-5">
+                <div class="section-heading text-center">
+                    <h2>My <strong>Blog</strong></h2>
+                    <p>Insights, technology tutorials, and learning reflections.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-sm-6 col-lg-4 mb-4">
+                <div class="blog-entry">
+                    <a href="#section-blog">
+                        <img src="{{ url_for('static', filename='assets/images/post_1.jpg') }}"
+                             alt="Python programming"
+                             class="img-fluid">
+                    </a>
+
+                    <div class="blog-entry-text">
+                        <h3>
+                            <a href="#section-blog">
+                                My Journey into the World of Technology
+                            </a>
+                        </h3>
+
+                        <p class="mb-4">
+                            Reflections on transitioning into computer science as a BIT student,
+                            mastering Python fundamentals, and cultivating an engineering mindset.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 mb-4">
+                <div class="blog-entry">
+                    <a href="#section-blog">
+                        <img src="{{ url_for('static', filename='assets/images/post_2.jpg') }}"
+                             alt="Data Science"
+                             class="img-fluid">
+                    </a>
+
+                    <div class="blog-entry-text">
+                        <h3>
+                            <a href="#section-blog">
+                                What Is Data Science &amp; Why It Matters
+                            </a>
+                        </h3>
+
+                        <p class="mb-4">
+                            How combining mathematics, programming, and domain knowledge helps us
+                            extract predictive patterns and discover answers from vast datasets.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-6 col-lg-4 mb-4">
+                <div class="blog-entry">
+                    <a href="#section-blog">
+                        <img src="{{ url_for('static', filename='assets/images/post_3.jpg') }}"
+                             alt="Python projects"
+                             class="img-fluid">
+                    </a>
+
+                    <div class="blog-entry-text">
+                        <h3>
+                            <a href="#section-blog">
+                                Practical Python Projects for Beginners
+                            </a>
+                        </h3>
+
+                        <p class="mb-4">
+                            A breakdown of effective hands-on projects—from recommendation engines
+                            to weather tools—that accelerate software development skills.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="site-section" id="section-contact">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-12 mb-5">
+                <div class="section-heading text-center">
+                    <h2>Get <strong>In Touch</strong></h2>
+                    <p>Have an opportunity, project collaboration, or question? Send me a message!</p>
+                </div>
+            </div>
+
+            <div class="col-md-7 mb-5 mb-md-0">
+
+                <!-- Flash Messages -->
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                        {% for category, msg in messages %}
+                            <div class="alert alert-{{ category }} alert-dismissible fade show mb-4" role="alert">
+                                {{ msg }}
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+
+                <div id="form-alert-container"></div>
+
+                <form action="{{ url_for('submit_form') }}"
+                      class="site-form"
+                      method="POST">
+
+                    <h3 class="mb-4 text-white">Send Me a Message</h3>
+
+                    <div class="form-group">
+                        <input name="name"
+                               type="text"
+                               class="form-control px-3 py-4"
+                               placeholder="Your Full Name"
+                               required>
+                    </div>
+
+                    <div class="form-group">
+                        <input name="email"
+                               type="email"
+                               class="form-control px-3 py-4"
+                               placeholder="Your Email Address"
+                               required>
+                    </div>
+
+                    <div class="form-group mb-4">
+                        <textarea name="message"
+                                  class="form-control px-3 py-4"
+                                  cols="30"
+                                  rows="6"
+                                  placeholder="Write your message here..."
+                                  required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="submit"
+                               class="btn btn-primary px-4 py-3 font-weight-bold"
+                               value="Send Message">
+                    </div>
+
+                </form>
+            </div>
+
+            <div class="col-md-5 pl-md-5">
+                <h3 class="mb-4 text-white">Contact Information</h3>
+
+                <ul class="site-contact-details">
+
+                    <li>
+                        <span>EMAIL</span>
+                        <a href="mailto:sushilyogi56@gmail.com">sushilyogi56@gmail.com</a>
+                    </li>
+
+                    <li>
+                        <span>LOCATION</span>
+                        Kathmandu, Nepal
+                    </li>
+
+                    <li>
+                        <span>GITHUB</span>
+                        <a href="https://github.com/Sushil680" target="_blank" rel="noopener noreferrer">
+                            github.com/Sushil680
+                        </a>
+                    </li>
+
+                    <li>
+                        <span>LINKEDIN</span>
+                        <a href="https://www.linkedin.com/in/sushil-yogi/" target="_blank" rel="noopener noreferrer">
+                            linkedin.com/in/sushil-yogi
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+    <div class="container">
+
+        <div class="row mb-4">
+            <div class="col-md-12 text-center">
+                <p>
+                    <a href="https://github.com/Sushil680" target="_blank" rel="noopener noreferrer" class="social-item" title="GitHub">
+                        <span class="icon-github"></span>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/sushil-yogi/" target="_blank" rel="noopener noreferrer" class="social-item" title="LinkedIn">
+                        <span class="icon-linkedin2"></span>
+                    </a>
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <p class="col-12 text-center text-muted">
+                Copyright &copy;
+                <script>
+                    document.write(new Date().getFullYear());
+                </script>
+                <strong>Sushil Nath Yogi</strong>. All rights reserved.
+            </p>
+        </div>
+
+    </div>
+</footer>
+
+<!-- JAVASCRIPT -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Fallback to local jQuery if CDN is offline -->
+<script>
+    if (typeof jQuery == 'undefined') {
+        document.write('<script src="{{ url_for('static', filename='vendor/jquery.min.js') }}"><\/script>');
+    }
+</script>
+
+<script src="{{ url_for('static', filename='vendor/jquery-migrate-3.0.1.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/popper.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/bootstrap.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/jquery.easing.1.3.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/jquery.waypoints.min.js') }}"></script>
+
+<!-- Isotope and ImagesLoaded with fallback to local scripts.min.js -->
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+<script>
+    if (typeof $.fn.isotope == 'undefined') {
+        document.write('<script src="{{ url_for('static', filename='scripts.min.js') }}"><\/script>');
+    }
+</script>
+
+<script src="{{ url_for('static', filename='custom.js') }}"></script>
+
+</body>
+</html>

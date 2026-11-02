@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | Sushil Nath Yogi</title>
+    <link rel="icon" href="{{ url_for('static', filename='assets/favicon.ico') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='myStyle.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="text">
+        <h1>404</h1>
+        <h2>Uh, Ohh!</h2>
+        <h3>Sorry, we can't find what you're looking for &mdash; it's quite dark in here!</h3>
+        <a href="{{ url_for('home_page') }}" class="btn-home">&larr; Return to Portfolio</a>
+    </div>
+
+    <div class="torch"></div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        if (typeof jQuery == 'undefined') {
+            document.write('<script src="{{ url_for('static', filename='vendor/jquery.min.js') }}"><\/script>');
+        }
+    </script>
+    <script src="{{ url_for('static', filename='myScript.js') }}"></script>
+</body>
+</html>
