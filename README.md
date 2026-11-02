@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Sushil Nath Yogi — Personal Portfolio Website
 
 A responsive personal portfolio and web application built using **Python (Flask)**, **Bootstrap**, **JavaScript (Isotope, Waypoints)**, and **ReportLab**. Designed to showcase academic background, data science projects, Python applications, and creative graphic design work.
@@ -98,3 +99,7 @@ python -m unittest discover tests
 - **Email**: [sushilyogi56@gmail.com](mailto:sushilyogi56@gmail.com)
 - **GitHub**: [@Sushil680](https://github.com/Sushil680)
 - **LinkedIn**: [linkedin.com/in/sushil-yogi](https://www.linkedin.com/in/sushil-yogi/)
+=======
+# My-Portfolio
+A personal portfolio website built with Python Flask, HTML, CSS, JavaScript, and Bootstrap to showcase my skills, projects, education, and journey as a BIT student interested in Data Science, Machine Learning, and Web Development.
+>>>>>>> b9e0e8f106c781bb7e577f3fc968c36660be1805
